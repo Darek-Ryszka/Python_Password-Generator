@@ -16,6 +16,8 @@ lowercase_letters = int(input("How many lowercase letters should the password ha
 if lowercase_letters < 0 or lowercase_letters > characters_left:
     print("To many signs! You chose:", characters_left)
     sys.exit(0)
+else:
+    characters_left -= lowercase_letters
 
 uppercase_letters = int(input("How many uppercase letters should the password have? "))
 
