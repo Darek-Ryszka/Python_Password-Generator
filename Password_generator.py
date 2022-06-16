@@ -1,4 +1,6 @@
 import sys
+import string
+import random
 
 password = []
 characters_left = -1
@@ -36,6 +38,7 @@ digits = int(input("How many digits should the password have? "))
 update_characters_left(digits)
 
 if characters_left > 0:
+    print()
     print("Not all characters were used! Password will be completed by lowercase letters!")
     lowercase_letters += characters_left
 
@@ -46,3 +49,20 @@ print("Lowercase letters: ", lowercase_letters)
 print("Uppercase letters: ", uppercase_letters)
 print("Special characters: ", special_characters)
 print("Digits: ", digits)
+
+for i in range(password_length):
+    if lowercase_letters > 0:
+        password.append(random.choice(string.ascii_lowercase))
+        lowercase_letters -= 1
+    if uppercase_letters > 0:
+        password.append(random.choice(string.ascii_uppercase))
+        uppercase_letters -= 1
+    if special_characters > 0:
+        password.append(random.choice(string.punctuation))
+        special_characters -= 1
+    if digits > 0:
+        password.append(random.choice(string.digits))
+        digits -= 1
+
+random.shuffle(password)
+print("Your generated password: ", "".join(password))
