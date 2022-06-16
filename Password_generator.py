@@ -13,7 +13,7 @@ else:
 
 lowercase_letters = int(input("How many lowercase letters should the password have?"))
 
-if lowercase_letters > characters_left:
+if lowercase_letters < 0 or lowercase_letters > characters_left:
     print("To many signs!")
     sys.exit(0)
 
