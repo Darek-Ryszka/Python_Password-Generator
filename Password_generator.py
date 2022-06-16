@@ -1,12 +1,15 @@
 import sys
 
 password = []
+characters_left = -1
 
 password_length = int(input("How long the password should be?"))
 
 if password_length < 5:
     print("The password should be at least 5 characters long! Try again.")
     sys.exit(0)
+else:
+    characters_left = password_length
 
 lowercase_letters = int(input("How many lowercase letters should the password have?"))
 
