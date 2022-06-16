@@ -30,5 +30,7 @@ uppercase_letters = int(input("How many uppercase letters should the password ha
 update_characters_left(uppercase_letters)
 
 special_characters = int(input("How many special characters should the password have? "))
+update_characters_left(special_characters)
 
 digits = int(input("How many digits should the password have? "))
+update_characters_left(digits)
