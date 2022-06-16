@@ -37,3 +37,12 @@ update_characters_left(digits)
 
 if characters_left > 0:
     print("Not all characters were used! Password will be completed by lowercase letters!")
+    lowercase_letters += characters_left
+
+print()
+print("Your password: ")
+print("Password length: ", password_length)
+print("Lowercase letters: ", lowercase_letters)
+print("Uppercase letters: ", uppercase_letters)
+print("Special characters: ", special_characters)
+print("Digits: ", digits)
